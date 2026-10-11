@@ -1,77 +1,68 @@
-<?php 
 
-    class Element { 
+<?php
 
-        private $name;
-        private $number;
-        private $symbol;
-        private $atomicNumber;
-        private $atomicMass;
-        private $groupBlock;
-        private $electronConfiguration;
+class Element
+{
 
+    private $name;
+    private $symbol;
+    private $atomicNumber;
+    private $atomicMass;
+    private $group;
+    private $period;
+    private $block;
+    private $electronConfiguration;
 
-        //Getters 
+    public function __construct($name, $symbol, $atomicNumber, $atomicMass, $group, $period, $block, $electronConfiguration){
 
-        function getName(){
-            return $this->name;
-        }
+        $this->name = $name;
 
-        function getNumber(){
-            return $this->number;
-        }
+        $this->symbol = $symbol;
 
-        function getSymbol(){
-            return $this->symbol;
-        }
+        $this->atomicNumber = $atomicNumber;
 
-        function getAtomicNumber(){
-            return $this->atomicNumber;
-        }
+        $this->atomicMass = $atomicMass;
 
-        function getAtomicMass(){
-            return $this->atomicMass;
-        }
+        $this->group = $group;
 
-        function getGroupBlock(){
-            return $this->groupBlock;
-        }
+        $this->period = $period;
 
-        function getElectronConfiguration(){
-            return $this->electronConfiguration;
-        }
+        $this->block = $block;
 
-
-        //Setters
-
-        function setName($name){
-            $this->name = $name;
-        }
-
-        function setNumber($number){
-            $this->number = $number;
-        }
-
-        function setSymbol($symbol){
-            $this->symbol = $symbol;
-        }
-
-        function setAtomicNumber($atomicNumber){
-            $this->atomicNumber = $atomicNumber;
-        }
-
-        function setAtomicMass($atomicMass){
-            $this->atomicMass = $atomicMass;
-        }
-
-        function setGroupBlock($groupBlock){
-            $this->groupBlock = $groupBlock;
-        }
-
-        function setElectronConfiguration($electronConfiguration){
-            $this->electronConfiguration = $electronConfiguration;
-        }
-
-        
-
+        $this->electronConfiguration = $electronConfiguration;
     }
+
+    // Getters
+
+    public function getName(){
+        return $this->name;
+    }
+
+    public function getSymbol(){
+        return $this->symbol;
+    }
+
+    public function getAtomicNumber(){
+        return $this->atomicNumber;
+    }
+
+    public function getAtomicMass(){
+        return $this->atomicMass;
+    }
+
+    public function getGroup(){
+        return $this->group;
+    }
+
+    public function getPeriod(){
+        return $this->period;
+    }
+
+    public function getBlock(){
+        return $this->block;
+    }
+
+    public function getElectronConfiguration(){
+        return $this->electronConfiguration;
+    }
+}
