@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/../model/Element.php';
+require_once __DIR__ . '/../Model/Element.php';
 
 class ElementRepository{
     private $url;
