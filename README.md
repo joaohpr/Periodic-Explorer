@@ -91,7 +91,7 @@ Os principais objetivos são:
 
 ## Status
 
-Em desenvolvimento.
+Primeira Version
 
 ## Desenvolvedor
 
