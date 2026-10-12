@@ -93,6 +93,8 @@ Os principais objetivos são:
 
 Primeira Version
 
+IMPORTANTE : as pesquisas somente funcionam com os nomes em ingles,por conta da API que alimenta o sistema
+
 ## Desenvolvedor
 
 **joaohpr**
