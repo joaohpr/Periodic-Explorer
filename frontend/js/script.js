@@ -4,17 +4,21 @@ $(document).ready(function () {
 
         event.preventDefault();
 
-        let valorBusca = $(".input").val();
+        let valorBusca = $('input[name="input"]').val();
 
         if (valorBusca.trim() === "") {
+
             $(".result").html(`
                 <p>Digite o nome, símbolo ou número atômico do elemento.</p>
             `);
+
             return;
         }
 
         $.ajax({
+
             url: "http://localhost:8000/backend/Controller/ElementController.php",
+
             type: "POST",
 
             data: {
@@ -28,6 +32,7 @@ $(document).ready(function () {
                 if (data.success === true) {
 
                     $(".result").html(`
+
                         <div class="card element-card shadow">
 
                             <div class="card-body">
@@ -53,31 +58,43 @@ $(document).ready(function () {
                                 <div class="row">
 
                                     <div class="col-6 mb-3">
+
                                         <strong>Massa atômica</strong>
+
                                         <p class="mb-0">
-                                            ${data.atomicMass}g/mol
+                                            ${data.atomicMass} g/mol
                                         </p>
+
                                     </div>
 
                                     <div class="col-6 mb-3">
+
                                         <strong>Grupo</strong>
+
                                         <p class="mb-0">
                                             ${data.group}
                                         </p>
+
                                     </div>
 
                                     <div class="col-6 mb-3">
+
                                         <strong>Período</strong>
+
                                         <p class="mb-0">
                                             ${data.period}
                                         </p>
+
                                     </div>
 
                                     <div class="col-6 mb-3">
+
                                         <strong>Bloco</strong>
+
                                         <p class="mb-0">
                                             ${data.block}
                                         </p>
+
                                     </div>
 
                                 </div>
@@ -93,6 +110,7 @@ $(document).ready(function () {
                             </div>
 
                         </div>
+
                     `);
 
                 } else {
